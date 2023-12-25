@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}Psycle {% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='main.css')}}">
+      </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="height: 60px;">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{url_for('home')}}" style="font-size:larger;">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('about')}}" style="font-size:larger;">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:larger;">
+                      Features
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="{{url_for('test')}}">Test</a></li>
+                      <li><a class="dropdown-item" href="#">Grow</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Forum</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:larger;">
+                      Help Bot
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Patient</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Parent</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        
+          <div class="b-example-divider"></div>
+
+          {% block content %}
+          {% endblock %}
+          
+          <!-- Footer -->
+          <footer class="bg-body-tertiary text-center">
+            <!-- Grid container -->
+            <div class="container p-4">
+              <!-- Section: Social media -->
+              <section class="mb-4">
+                <!-- Facebook -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+
+                <!-- Twitter -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+
+                <!-- Google -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-google"></i
+                ></a>
+
+                <!-- Instagram -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <!-- Linkedin -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="#!" role="button"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+
+                <!-- Github -->
+                <a data-mdb-ripple-init class="btn btn-outline btn-floating m-1" href="https://github.com/riyasachdeva04" role="button"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </section>
+              <!-- Section: Social media -->
+
+
+              <!-- Section: Text -->
+              <section class="mb-4">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+                  repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam eum
+                  harum corrupti dicta, aliquam sequi voluptate quas.
+                </p>
+              </section>
+              <!-- Section: Text -->
+
+              <!-- Section: Links -->
+              <section class="">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a class="text-body" href="#!">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 2</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 3</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 4</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a class="text-body" href="#!">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 2</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 3</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 4</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a class="text-body" href="#!">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 2</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 3</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 4</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <a class="text-body" href="#!">Link 1</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 2</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 3</a>
+                      </li>
+                      <li>
+                        <a class="text-body" href="#!">Link 4</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </section>
+              <!-- Section: Links -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+              © 2023 Copyright:
+              <a class="text-reset fw-bold" href="https://github.com/riyasachdeva04">Made with love and care: Psycle</a>
+            </div>
+            <!-- Copyright -->
+          </footer>
+          <!-- Footer -->
+          
+            
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+    </body>
+</html>
+
