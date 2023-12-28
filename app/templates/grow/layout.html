@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{url_for('grow_dashboard')}}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('grow_courses')}}">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for('grow_analytics')}}">Analytics</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Grid -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 sidebar">
+                    <!-- Sidebar content -->
+                    <p>John Smith</p>
+                    <p>Premium Member</p>
+                </div>
+
+            {% block content2 %}
+            {% endblock %}
+        </div>
+
+    </body>
+{% endblock content %}

@@ -39,6 +39,22 @@ def autism_form():
 
     return render_template('test.html', form=form)
 
+@app.route('/grow')
+def grow():
+    return render_template('grow/dashboard.html')
+
+@app.route('/grow/dashboard')
+def grow_dashboard():
+    return render_template('grow/dashboard.html')
+
+@app.route('/grow/courses')
+def grow_courses():
+    return render_template('grow/courses.html')
+
+@app.route('/grow/analytics')
+def grow_analytics():
+    return render_template('grow/analytics.html')
+
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()
