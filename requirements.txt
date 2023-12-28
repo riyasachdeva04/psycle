@@ -1,0 +1,8 @@
+opencv-python
+deepface
+openai
+flask
+chroma
+langchain
+numpy
+pandas
