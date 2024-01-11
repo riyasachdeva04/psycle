@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{url_for('static', filename='chatbot_styles.css')}}">
+{% endblock %}
+
+{% block content %}
+<div id="heading">
+    <h1>Lumi</h1> 
+</div>
+
+  <div class="message bot">
+    Hello! I'm Lumi🌞, how may I help you today?
+  </div>
+
+  <form id="chat-form">
+    <textarea placeholder="Talk to Lumi ♡"></textarea>
+    <button type="submit">Send</button>
+  </form>
+{% endblock content %}

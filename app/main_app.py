@@ -57,6 +57,14 @@ def grow_courses():
 def grow_analytics():
     return render_template('grow/analytics.html')
 
+@app.route('/chatbot/patient')
+def patient_bot():
+    return render_template('patient.html')
+
+@app.route('/chatbot/parent')
+def parent_bot():
+    return render_template('parent.html')
+
 @app.route("/register", methods=['GET', 'POST'])
 def register():
     form = RegistrationForm()

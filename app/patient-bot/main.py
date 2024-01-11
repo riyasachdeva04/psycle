@@ -45,7 +45,7 @@ def get_most_apt_quote(user_input, quotes_data):
 
 if __name__ == "__main__":
     # Path to the JSON file containing motivational quotes
-    quotes_file_path = "motivational_quotes.json"
+    quotes_file_path = "patient-bot/motivational_quotes.json"
 
     # Load motivational quotes from the JSON file
     quotes_data = load_quotes(quotes_file_path)

@@ -1,0 +1,404 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "text": "You are unique and special just the way you are."
+    },
+    {
+      "id": 2,
+      "text": "You have the power to learn and grow every day."
+    },
+    {
+      "id": 3,
+      "text": "Your thoughts and ideas are important."
+    },
+    {
+      "id": 4,
+      "text": "You can face challenges with courage and perseverance."
+    },
+    {
+      "id": 5,
+      "text": "You are capable of making friends and connecting with others."
+    },
+    {
+      "id": 6,
+      "text": "You can express yourself in unique and creative ways."
+    },
+    {
+      "id": 7,
+      "text": "You are loved and accepted for who you are."
+    },
+    {
+      "id": 8,
+      "text": "You have the strength to overcome any obstacles."
+    },
+    {
+      "id": 9,
+      "text": "You are a valuable and important part of your community."
+    },
+    {
+      "id": 10,
+      "text": "You can learn and achieve great things at your own pace."
+    },
+    {
+      "id": 11,
+      "text": "Your uniqueness is your superpower, embrace it."
+    },
+    {
+      "id": 12,
+      "text": "Every small step you take is a giant leap towards success."
+    },
+    {
+      "id": 13,
+      "text": "Your curiosity is the key to unlocking endless possibilities."
+    },
+    {
+      "id": 14,
+      "text": "Embrace challenges, they are stepping stones to your greatness."
+    },
+    {
+      "id": 15,
+      "text": "In your differences lie your strengths; celebrate them."
+    },
+    {
+      "id": 16,
+      "text": "Your energy is a force for good in this world."
+    },
+    {
+      "id": 17,
+      "text": "You have the ability to turn every struggle into a triumph."
+    },
+    {
+      "id": 18,
+      "text": "Your creativity knows no bounds; let it shine brightly."
+    },
+    {
+      "id": 19,
+      "text": "With each day, you're building a stronger, smarter, and more resilient you."
+    },
+    {
+      "id": 20,
+      "text": "Your mind is a garden, and your thoughts are the seeds of greatness."
+    },
+    {
+      "id": 21,
+      "text": "You're not just a part of the puzzle; you're the missing piece that completes it."
+    },
+    {
+      "id": 22,
+      "text": "Your potential is limitless, reach for the stars."
+    },
+    {
+      "id": 23,
+      "text": "The world is a canvas, and you are the artist of your own masterpiece."
+    },
+    {
+      "id": 24,
+      "text": "Your enthusiasm is infectious; spread it wherever you go."
+    },
+    {
+      "id": 25,
+      "text": "Every setback is a setup for a comeback; keep going."
+    },
+    {
+      "id": 26,
+      "text": "You are a beacon of light in a world that needs your brightness."
+    },
+    {
+      "id": 27,
+      "text": "Your journey may be different, but the destination is equally extraordinary."
+    },
+    {
+      "id": 28,
+      "text": "You are a warrior, and every challenge is a battle you can conquer."
+    },
+    {
+      "id": 29,
+      "text": "Your laughter has the power to heal and uplift."
+    },
+    {
+      "id": 30,
+      "text": "Believe in yourself, for you are capable of amazing things."
+    },
+    {
+      "id": 31,
+      "text": "Your dreams are the blueprints for your future; chase them fearlessly."
+    },
+    {
+      "id": 32,
+      "text": "Your kindness is a gift that makes the world a better place."
+    },
+    {
+      "id": 33,
+      "text": "In the symphony of life, you play a unique and beautiful melody."
+    },
+    {
+      "id": 34,
+      "text": "Your ideas have the potential to change the world; never underestimate them."
+    },
+    {
+      "id": 35,
+      "text": "You are a masterpiece in progress; enjoy the journey of self-discovery."
+    },
+    {
+      "id": 36,
+      "text": "Your quirks make you interesting, lovable, and absolutely special."
+    },
+    {
+      "id": 37,
+      "text": "You're not just a student; you're a scholar on a remarkable academic adventure."
+    },
+    {
+      "id": 38,
+      "text": "Your potential is like a flame; let it burn bright and guide your path."
+    },
+    {
+      "id": 39,
+      "text": "You are not just a part of the crowd; you stand out in the most wonderful ways."
+    },
+    {
+      "id": 40,
+      "text": "Your laughter is a melody that brings joy to the hearts of those around you."
+    },
+    {
+      "id": 41,
+      "text": "You are a canvas of potential; each day is a brushstroke of progress."
+    },
+    {
+      "id": 42,
+      "text": "Your energy is a force that can move mountains; channel it wisely."
+    },
+    {
+      "id": 43,
+      "text": "You are a beacon of inspiration, lighting the way for others to follow."
+    },
+    {
+      "id": 44,
+      "text": "Your determination is the wind in your sails; let it carry you to new horizons."
+    },
+    {
+      "id": 45,
+      "text": "You are a masterpiece in the making; embrace the process of becoming."
+    },
+    {
+      "id": 46,
+      "text": "Your ability to find joy in the present moment is a true gift."
+    },
+    {
+      "id": 47,
+      "text": "You are a magnet for success, attracting positivity with every step."
+    },
+    {
+      "id": 48,
+      "text": "Your strength is not in being like everyone else; it's in being authentically you."
+    },
+    {
+      "id": 49,
+      "text": "You are a masterpiece, intricately woven with threads of resilience and determination."
+    },
+    {
+      "id": 50,
+      "text": "Your laughter is a symphony that echoes joy throughout the world."
+    },
+    {
+      "id": 51,
+      "text": "You are a book waiting to be written; each day is a new page."
+    },
+    {
+      "id": 52,
+      "text": "Your determination is the engine that propels you towards your dreams."
+    },
+    {
+      "id": 53,
+      "text": "You are a star that lights up the sky of possibility."
+    },
+    {
+      "id": 54,
+      "text": "Your spirit is unbreakable; face challenges with unwavering courage."
+    },
+    {
+      "id": 55,
+      "text": "You are a beacon of positivity, lighting up even the darkest corners."
+    },
+    {
+      "id": 56,
+      "text": "Your journey is a testament to your strength and unwavering spirit."
+    },
+    {
+      "id": 57,
+      "text": "You are not just a student; you are a scholar in the school of life."
+    },
+    {
+      "id": 58,
+    "text": "Your potential is boundless; let it soar to new heights."
+    },
+    {
+      "id": 59,
+      "text": "You are a masterpiece in the making; every experience adds a stroke to your canvas."
+    },
+    {
+      "id": 60,
+      "text": "Your curiosity is the compass that leads you to new and exciting discoveries."
+    },
+    {
+      "id": 61,
+      "text": "You are a force of nature; let your authenticity shine through."
+    },
+    {
+      "id": 62,
+      "text": "Your dreams are the blueprints for a future filled with greatness."
+    },
+    {
+      "id": 63,
+      "text": "You are a puzzle piece essential to the beauty of the bigger picture."
+    },
+    {
+      "id": 64,
+      "text": "Your heart is a reservoir of kindness; let it flow generously."
+    },
+    {
+      "id": 65,
+      "text": "You are a superhero in your own story; face challenges with a cape of courage."
+    },
+    {
+      "id": 66,
+      "text": "Your ability to adapt is a superpower; use it to navigate any situation."
+    },
+    {
+      "id": 67,
+      "text": "You are a shining star in the constellation of life; your light is indispensable."
+    },
+    {
+      "id": 68,
+      "text": "Your laughter is a melody that brings harmony to the world."
+    },
+    {
+      "id": 69,
+      "text": "You are a masterpiece, evolving and growing with every brushstroke of experience."
+    },
+    {
+      "id": 70,
+      "text": "Your uniqueness is a gift; cherish and share it with the world."
+    },
+    {
+      "id": 71,
+      "text": "You are a beacon of hope in a world that sometimes needs a little extra light."
+    },
+    {
+      "id": 72,
+      "text": "Your resilience is the anchor that keeps you steady in the storm of challenges."
+    },
+    {
+      "id": 73,
+      "text": "You are a scholar of life, constantly learning and growing."
+    },
+    {
+      "id": 74,
+      "text": "Your potential is like a treasure chest; unlock it with the key of determination."
+    },
+    {
+      "id": 75,
+      "text": "You are a shooting star; your journey is swift, bright, and full of wonder."
+    },
+    {
+      "id": 76,
+      "text": "Your creativity is a magical wand; use it to paint your world with vibrant colors."
+    },
+    {
+      "id": 77,
+      "text": "You are a trailblazer, forging a path that others will follow."
+    },
+    {
+      "id": 78,
+      "text": "Your journey is a testament to your strength and resilience."
+    },
+    {
+      "id": 79,
+      "text": "You are not just a part of the crowd; you stand out in the most wonderful ways."
+    },
+    {
+      "id": 80,
+      "text": "Your laughter is a melody that brings joy to the hearts of those around you."
+    },
+    {
+      "id": 81,
+      "text": "You are a canvas of potential; each day is a brushstroke of progress."
+    },
+    {
+      "id": 82,
+      "text": "Your energy is a force that can move mountains; channel it wisely."
+    },
+    {
+      "id": 83,
+      "text": "You are a beacon of inspiration, lighting the way for others to follow."
+    },
+    {
+      "id": 84,
+      "text": "Your determination is the wind in your sails; let it carry you to new horizons."
+    },
+    {
+      "id": 85,
+      "text": "You are a masterpiece in the making; embrace the process of becoming."
+    },
+    {
+      "id": 86,
+      "text": "Your enthusiasm is a spark that ignites passion in those around you."
+    },
+    {
+      "id": 87,
+      "text": "You are a puzzle piece in the grand design of the universe; irreplaceable and essential."
+    },
+    {
+      "id": 88,
+      "text": "Your dreams are the seeds of your future; plant them with care and watch them bloom."
+    },
+    {
+      "id": 89,
+      "text": "You are a superhero in the story of your life; face challenges with a heart full of courage."
+    },
+    {
+      "id": 90,
+      "text": "Your journey is like a tapestry; each thread contributes to the beauty of the whole."
+    },
+    {
+      "id": 91,
+      "text": "You are a star in the sky of possibilities; let your light guide the way."
+    },
+    {
+      "id": 92,
+      "text": "Your potential is like a flame; let it burn brightly and illuminate your path."
+    },
+    {
+      "id": 93,
+      "text": "You are a beacon of positivity, shining even in the darkest moments."
+    },
+    {
+      "id": 94,
+      "text": "Your kindness is a ripple that creates waves of goodness in the world."
+    },
+    {
+      "id": 95,
+      "text": "You are a work of art in progress, with each experience adding depth and color to your canvas."
+    },
+    {
+      "id": 96,
+      "text": "Your intelligence is a beacon that lights up the path to success."
+    },
+    {
+      "id": 97,
+      "text": "You are a masterpiece, constantly evolving into a more incredible version of yourself."
+    },
+    {
+      "id": 98,
+      "text": "Your energy is a magnet, attracting success and positivity into your life."
+    },
+    {
+      "id": 99,
+      "text": "You are a symphony of strengths, playing a beautiful tune that resonates with the world."
+    },
+    {
+      "id": 100,
+      "text": "Your journey is a dance of determination and resilience; keep moving to the rhythm of success."
+    }
+  ]
+}
