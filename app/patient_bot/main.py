@@ -3,19 +3,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from textblob import TextBlob
 
-def load_quotes(file_path):
-    try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-            # Assuming the key is "messages" in your JSON structure
-            quotes_data = data.get("messages", [])
-        return quotes_data
-    except FileNotFoundError:
-        print(f"Error: File '{file_path}' not found.")
-        return None
-    except json.JSONDecodeError:
-        print(f"Error: Failed to decode JSON in '{file_path}'. Check if the file is formatted correctly.")
-        return None
+def load_quotes():
+    with open("patient_bot/motivational_quotes.json", 'r') as file:
+        data = json.load(file)
+        # Assuming the key is "messages" in your JSON structure
+        quotes_data = data.get("messages", [])
+    return quotes_data
 
 def get_most_apt_quote(user_input, quotes_data):
     # Analyze sentiment of the user input
@@ -48,7 +41,7 @@ if __name__ == "__main__":
     quotes_file_path = "patient-bot/motivational_quotes.json"
 
     # Load motivational quotes from the JSON file
-    quotes_data = load_quotes(quotes_file_path)
+    quotes_data = load_quotes()
 
     if quotes_data:
         # Get user input

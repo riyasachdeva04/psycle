@@ -14,8 +14,8 @@
     Hello! I'm Lumi🌞, how are you feeling today?
   </div>
 
-  <form id="chat-form">
-    <textarea placeholder="Talk to Lumi ♡"></textarea>
+  <form id="chat-form" method="post" action="{{url_for('patient_bot')}}">
+    <textarea name="user_input" placeholder="Talk to Lumi ♡"></textarea>
     <button type="submit">Send</button>
-  </form>
+</form>
 {% endblock content %}

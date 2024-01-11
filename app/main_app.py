@@ -1,7 +1,8 @@
 from flask import Flask, flash, redirect, render_template, request, url_for
 from forms import LoginForm, RegistrationForm
 from test_form import AutismForm
-# from forms import RegistrationForm
+from patient_bot.main import load_quotes, get_most_apt_quote
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -57,13 +58,21 @@ def grow_courses():
 def grow_analytics():
     return render_template('grow/analytics.html')
 
-@app.route('/chatbot/patient')
+@app.route('/helpbot/patient', methods=['GET', 'POST'])
 def patient_bot():
-    return render_template('patient.html')
+    if request.method == 'POST':
+        user_input = request.form['user_input']
 
-@app.route('/chatbot/parent')
+        if user_input:
+            quotes_data = load_quotes()
+            most_apt_quote = get_most_apt_quote(user_input, quotes_data)
+            return render_template('patient.html', quote=most_apt_quote['text'], user_input=user_input)
+
+    return render_template('helpbot/patient.html')
+
+@app.route('/helpbot/parent')
 def parent_bot():
-    return render_template('parent.html')
+    return render_template('helpbot/parent.html')
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
