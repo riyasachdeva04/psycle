@@ -1,5 +1,4 @@
-from curses import flash
-from flask import Flask, redirect, render_template, request, url_for
+from flask import Flask, flash, redirect, render_template, request, url_for
 from forms import LoginForm, RegistrationForm
 from test_form import AutismForm
 # from forms import RegistrationForm
@@ -35,8 +34,11 @@ def autism_form():
         print("Sex:", form.Sex.data)
         print("Family_mem_with_ASD:", form.Family_mem_with_ASD.data)
         print("A10_score:", form.A10_score.data)
-        print("Ethnicity:", form.Ethnicity.data)
 
+        prediction = form.predict()
+
+        print(f'Model Prediction: {prediction}', 'info')
+        return redirect(url_for('autism_form')) 
     return render_template('test.html', form=form)
 
 @app.route('/grow')

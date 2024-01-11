@@ -2,7 +2,9 @@ opencv-python
 deepface
 openai
 flask
+flask_wtf
 chroma
 langchain
 numpy
 pandas
+scikit-learn==1.2.2
