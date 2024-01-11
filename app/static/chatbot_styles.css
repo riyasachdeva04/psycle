@@ -1,5 +1,3 @@
-/* Add this CSS to your existing styles or create a new stylesheet */
-
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f4;
@@ -14,21 +12,54 @@ body {
   padding: 15px 0;
 }
 
-.message {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.message.bot {
+.messagebot {
   background-color: #93999d;
   color: #fff;
-  max-width: 600px;
-  margin: 20px auto;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.user-message {
+  background-color: #ddd;
+  border-radius: 10px 10px 10px 0; 
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.bot-message {
+  background-color: #eee;
+  border-radius: 10px 10px 0 10px;
+  padding: 10px; 
+  margin-bottom: 10px;
+}
+
+.user-message { 
+  text-align: right;
+  max-width: auto;
+}
+
+.bot-message {
+  text-align: left;
+  width: auto;
+}
+
+.message {
+  max-width: 75%;
+  display: inline-block; 
+}
+
+.chat-container {
+  max-width: 800px;
+  margin: 10px auto;
+  height: 400px;
+  overflow-y: auto;
 }
 
 #chat-form {
-  max-width: 600px;
+  max-width: 800px;
   margin: 20px auto;
   display: flex;
 }

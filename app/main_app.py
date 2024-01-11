@@ -58,17 +58,26 @@ def grow_courses():
 def grow_analytics():
     return render_template('grow/analytics.html')
 
+chat_messages = []
 @app.route('/helpbot/patient', methods=['GET', 'POST'])
 def patient_bot():
+
     if request.method == 'POST':
         user_input = request.form['user_input']
 
         if user_input:
             quotes_data = load_quotes()
             most_apt_quote = get_most_apt_quote(user_input, quotes_data)
-            return render_template('patient.html', quote=most_apt_quote['text'], user_input=user_input)
 
-    return render_template('helpbot/patient.html')
+            # Append the initial bot message and user input to chat_messages
+            chat_messages.append({'type': 'user', 'content': user_input})
+
+            # Append the bot reply to chat_messages
+            chat_messages.append({'type': 'bot', 'content': most_apt_quote['text']})
+
+            return render_template('helpbot/patient.html', chat_messages=chat_messages, user_input=user_input, quote=most_apt_quote['text'])
+
+    return render_template('helpbot/patient.html', chat_messages=chat_messages)
 
 @app.route('/helpbot/parent')
 def parent_bot():
