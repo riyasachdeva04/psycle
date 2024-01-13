@@ -1,0 +1,7 @@
+docx2txt
+langchain-community
+langchain
+faiss-cpu
+huggingface_hub
+sentence-transformers
+transformers
