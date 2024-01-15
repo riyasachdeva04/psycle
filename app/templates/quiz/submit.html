@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submissions</title>
+</head>
+<body>
+    <h1>Submission Result</h1>
+    <p>Passage ID: {{ passage_id }}</p>
+    <p>User Answers:</p>
+    <ul>
+        {% for key, value in user_answers.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('results') }}">Check Result</a>
+</body>
+</html>

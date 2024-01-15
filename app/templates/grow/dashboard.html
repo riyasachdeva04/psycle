@@ -1,5 +1,10 @@
 {% extends "grow/layout.html" %}
 
+{% block styles %}
+  {{ super() }}
+  <link rel="stylesheet" href="{{url_for('static', filename='dashboard.css')}}">
+{% endblock %}
+
 {% block content2 %}
 <div class="col-sm-10">
     <h1>My Dashboard</h1>
@@ -8,16 +13,9 @@
     <!-- Cards -->
     <div class="card bg-light">
         <div class="card-body">
-            <h4>Current Courses</h4>
-            <p>Intro to Python</p>
-            <p>Web Development</p>
-        </div>
-    </div>
-
-    <div class="card bg-light">
-        <div class="card-body">
-            <h4>Certificates</h4>
-            <p>Python Basics - Issued on 5/12/22</p>
+            <h4>ReadME</h4>
+            <h5>Hey There</h5>
+            <p>I love drawing and listening to music.</p>
         </div>
     </div>
 
@@ -25,10 +23,46 @@
         <div class="card-body">
             <h4>Activity</h4>
             Last login: 12/28/2023<br>
-            5 courses in progress
+            <a href="{{ url_for('quiz') }}">Solve today's problem and mantain your streak</a>
+            <div class="graph">
+                <ul class="months">
+                  <li>Jan</li>
+                  <li>Feb</li>
+                  <li>Mar</li>
+                  <li>Apr</li>
+                  <li>May</li>
+                  <li>Jun</li>
+                  <li>Jul</li>
+                  <li>Aug</li>
+                  <li>Sep</li>
+                  <li>Oct</li>
+                  <li>Nov</li>
+                  <li>Dec</li>
+                </ul>
+                <ul class="days">
+                  <li>Sun</li>
+                  <li>Mon</li>
+                  <li>Tue</li>
+                  <li>Wed</li>
+                  <li>Thu</li>
+                  <li>Fri</li>
+                  <li>Sat</li>
+                </ul>
+                <ul class="squares" id="squaresList">
+                  <!-- squares appended here --> 
+                </ul>
+              </div>
         </div>
     </div>
 
 </div>
 </div>
 {% endblock content2 %}
+
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+  <script>
+    const squaresList = document.querySelector('.squares'); 
+  </script>
+  {% endblock   %}

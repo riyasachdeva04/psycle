@@ -1,8 +1,10 @@
-from flask import Flask, flash, redirect, render_template, request, url_for
+import json
+import os
+import random
+from flask import Flask, flash, redirect, render_template, request, session, url_for, jsonify
 from forms import LoginForm, RegistrationForm
 from test_form import AutismForm
 from patient_bot.main import load_quotes, get_most_apt_quote
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -42,21 +44,82 @@ def autism_form():
         return redirect(url_for('autism_form')) 
     return render_template('test.html', form=form)
 
-@app.route('/grow')
-def grow():
-    return render_template('grow/dashboard.html')
-
-@app.route('/grow/dashboard')
+@app.route('/grow')  
+@app.route('/grow/dashboard')  
 def grow_dashboard():
-    return render_template('grow/dashboard.html')
+    squaresList = []
+    return render_template('grow/dashboard.html', squaresList=squaresList)
 
-@app.route('/grow/courses')
-def grow_courses():
-    return render_template('grow/courses.html')
+@app.route('/grow/badges')
+def grow_badges():
+    return render_template('grow/badges.html')
 
 @app.route('/grow/analytics')
 def grow_analytics():
     return render_template('grow/analytics.html')
+
+with open('dataset1.json') as f:
+    dataset1 = json.load(f)
+
+with open('dataset2.json') as f:
+    dataset2 = json.load(f)
+
+combined_dataset = {**dataset1, **dataset2}
+
+@app.route('/quiz')
+def quiz():
+    # Choose a random passage
+    passage_id, passage_data = random.choice(list(combined_dataset.items()))
+    passage = passage_data['passage']
+    questions = passage_data['qa_pairs']
+    return render_template('quiz/index.html', passage_id=passage_id, passage=passage, questions=questions)
+
+@app.route('/quiz/submit', methods=['POST'])
+def submit():
+    passage_id = request.form['passage_id']
+    user_answers = {}
+    for key, value in request.form.items():
+        if key.startswith('question_'):
+            question_id = key.replace('question_', '')
+            user_answers[question_id] = value
+
+    correct_answers = combined_dataset[passage_id]['qa_pairs']
+
+    score = 0
+    correct_questions = []
+    wrong_questions = []
+
+    for question_id, user_answer in user_answers.items():
+        correct_answer_found = False
+        for q in correct_answers:
+            if q['query_id'] == question_id:
+                spans = q['answer']['spans']
+                for span in spans:
+                    if user_answer.lower() in span.lower():
+                        correct_answer_found = True
+                        score += 1
+                        break
+
+        if correct_answer_found:
+            correct_questions.append(question_id)
+        else:
+            wrong_questions.append(question_id)
+
+    # Store information in session
+    session['quiz_results'] = {
+        'passage_id': passage_id,
+        'user_answers': user_answers,
+        'score': score,
+        'correct_questions': correct_questions,
+        'wrong_questions': wrong_questions
+    }
+
+    return render_template('quiz/submit.html', passage_id=passage_id, user_answers=user_answers)
+
+@app.route('/quiz/results')
+def results():
+    quiz_results = session.get('quiz_results', {})
+    return render_template('quiz/results.html', quiz_results=quiz_results)
 
 chat_messages = []
 @app.route('/helpbot/patient', methods=['GET', 'POST'])

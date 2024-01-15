@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+</head>
+<body>
+    <h1>Quiz Results</h1>
+    <p>Score: {{ quiz_results.get('score', 0) }} out of {{ quiz_results.get('correct_questions')|length + quiz_results.get('wrong_questions')|length }}</p>
+
+    <h2>Correct Questions</h2>
+    <ul>
+        {% for question_id in quiz_results.get('correct_questions', []) %}
+            <li>{{ question_id }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Incorrect Questions</h2>
+    <ul>
+        {% for question_id in quiz_results.get('wrong_questions', []) %}
+            <li>{{ question_id }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('home') }}">Done</a>
+
+</body>
+</html>
