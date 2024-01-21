@@ -10,12 +10,24 @@
     <h1>Lumi</h1> 
 </div>
 
-  <div class="message bot">
-    Hello! I'm Lumi🌞, how may I help you today?
-  </div>
+<div class="messagebot">
+  Hello! I'm Lumi🌞, how are you feeling today?
+</div>
 
-  <form id="chat-form">
-    <textarea placeholder="Talk to Lumi ♡"></textarea>
-    <button type="submit">Send</button>
-  </form>
+<div class="chat-container">
+  <!-- Display previous chat messages -->
+  {% for message in chat_messages %}
+    {% if message.type == 'user' %}
+        <div class="user-message">{{ message.content }}</div>
+
+    {% elif message.type == 'bot' %}
+        <div class="bot-message">{{ message.content }}</div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<form id="chat-form" method="post" action="{{url_for('parent_bot')}}">
+  <textarea name="user_input" placeholder="Talk to Lumi ♡"></textarea>
+  <button type="submit">Send</button>
+</form>
 {% endblock content %}

@@ -12,3 +12,6 @@ textblob
 transformers
 flask-sqlalchemy
 dlib
+PyPDF2
+google.generativeai
+python-dotenv

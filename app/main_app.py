@@ -5,6 +5,7 @@ from flask import Flask, flash, redirect, render_template, request, session, url
 from forms import LoginForm, RegistrationForm
 from test_form import AutismForm
 from patient_bot.main import load_quotes, get_most_apt_quote
+from parent_bot.botapp import get_response
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
@@ -142,9 +143,22 @@ def patient_bot():
 
     return render_template('helpbot/patient.html', chat_messages=chat_messages)
 
-@app.route('/helpbot/parent')
+chat_messages2 = []
+
+@app.route('/parent-bot', methods=['GET', 'POST'])  
 def parent_bot():
-    return render_template('helpbot/parent.html')
+    user_input = []
+    response = []
+    if request.method == 'POST':
+    
+        user_input = request.form['user_input']
+
+        response = get_response(user_input)
+
+        chat_messages2.append({'type': 'user', 'content': user_input})
+        chat_messages2.append({'type': 'bot', 'content': response})
+
+    return render_template('helpbot/parent.html', chat_messages=chat_messages2, user_input=user_input, response=response)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
