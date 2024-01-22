@@ -147,8 +147,8 @@ chat_messages2 = []
 
 @app.route('/parent-bot', methods=['GET', 'POST'])  
 def parent_bot():
-    user_input = []
-    response = []
+    user_input = ""
+    response = ""
     if request.method == 'POST':
     
         user_input = request.form['user_input']

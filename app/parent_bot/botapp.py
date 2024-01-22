@@ -29,13 +29,12 @@ def get_response(user_input):
 
     Parental concerns may include emotional well-being, education, social interactions, and day-to-day challenges. Your responses should echo the positive and supportive tone of the guidebook. Use the content to address these concerns and offer practical advice.
 
-    guidebook:{text}
     parent query:{desc}
 
     The response should be compassionate and supportive. Do not deviate from helping both the parent and suggesting help to the child using ways listed in the guidebook.
     Don't just retrieve documents and information. 
     I want the response to be brief and in one single string with the structure:
-    {{"A helpful reply to the parent using information and techniques from the book"}}
-    """.format(text=text, desc=user_input)
+    A helpful reply to the parent using information and techniques from the book
+    """.format(desc=user_input)
     response=get_gemini_repsonse(input_prompt)
     return response
