@@ -39,6 +39,8 @@ Install dependencies:
 Set up a virtual environment and activate it.
 
 Run the application: 
+```cd app```
+
 ```python main_app.py```
 
 ## Contributing
