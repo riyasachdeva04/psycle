@@ -1,5 +1,6 @@
 import cv2
 from deepface import DeepFace
+import numpy as np
 
 # Load the pre-trained emotion detection model
 model = DeepFace.build_model("Emotion")
@@ -30,14 +31,17 @@ while True:
         # Resize the face ROI to match the input shape of the model
         resized_face = cv2.resize(face_roi, (48, 48), interpolation=cv2.INTER_AREA)
 
+        # Convert the resized face to a 3-channel image
+        resized_face_color = cv2.cvtColor(resized_face, cv2.COLOR_GRAY2BGR)
+
         # Normalize the resized face image
-        normalized_face = resized_face / 255.0
+        normalized_face = resized_face_color.astype(np.float32) / 255.0
 
         # Reshape the image to match the input shape of the model
-        reshaped_face = normalized_face.reshape(1, 48, 48, 1)
+        reshaped_face = normalized_face.reshape(1, 48, 48, 3)
 
         # Predict emotions using the pre-trained model
-        preds = model.predict(reshaped_face)[0]
+        preds = model.predict(reshaped_face)
         emotion_idx = preds.argmax()
         emotion = emotion_labels[emotion_idx]
 
