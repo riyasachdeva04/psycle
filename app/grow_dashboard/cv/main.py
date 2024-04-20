@@ -31,8 +31,6 @@ name = fileName.split('.')[0]
 print(name)
 
 
-# Recoder = cv.VideoWriter(f'{name}.mp4', fourcc, 15, (int(width), int(height)))
-
 while True:
     FRAME_COUNTER += 1
     # getting frame from camera

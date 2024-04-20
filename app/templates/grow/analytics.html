@@ -8,9 +8,86 @@
     <!-- Cards -->
     <div class="card bg-light">
         <div class="card-body">
-            <h4>ReadME</h4>
-            <h5>Hey There</h5>
-            <p>I love drawing and listening to music.</p>
+            <canvas id="quizChart1" width="5%" height="1%" style="display: block; box-sizing: border-box; height: 204px; width: 408px;"></canvas>
+            <canvas id="quizChart2" width="5%" height="1%" style="display: block; box-sizing: border-box; height: 204px; width: 408px;"></canvas>
+            <canvas id="quizChart3" width="5%" height="1%" style="display: block; box-sizing: border-box; height: 204px; width: 408px;"></canvas>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                // Dummy data                
+                
+                var quizData1 = {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: 'Marks',
+                        data: [80, 75, 90, 85, 95, 100, 80],
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                    }]
+                };
+                var ctx1 = document.getElementById('quizChart1').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'line',
+                    data: quizData1,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+
+                var quizData3 = {
+                    labels: ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral'],
+                    datasets: [{
+                        label: 'Emotion',
+                        data: [60, 20, 40, 60, 40, 30, 20],
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                    }]
+                };
+                var ctx3 = document.getElementById('quizChart3').getContext('2d');
+                new Chart(ctx3, {
+                    type: 'bar',
+                    data: quizData3,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+
+                var quizData2 = {
+                    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+                    datasets: [{
+                        label: 'Focus',
+                        data: [20, 30, 20, 40, 35, 45, 50],
+                        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                    }]
+                };
+                var ctx2 = document.getElementById('quizChart2').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'line',
+                    data: quizData2,
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100
+                            }
+                        }
+                    }
+                });
+                </script>
         </div>
     </div>
 
