@@ -30,7 +30,7 @@ LIGHT_RED = (2, 53, 255)
 detectFace = dlib.get_frontal_face_detector()
 # landmarks detector
 predictor = dlib.shape_predictor(
-    "Predictor/shape_predictor_68_face_landmarks_GTX.dat")
+    "grow_dashboard/Predictor/shape_predictor_68_face_landmarks_GTX.dat")
 
 # functions
 
