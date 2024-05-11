@@ -1,4 +1,0 @@
-deepface
-opencv-python
-dlib
-tf-keras

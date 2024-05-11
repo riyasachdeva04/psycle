@@ -98,8 +98,8 @@ while True:
         image, PointList = m.faceLandmakDetector(frame, grayFrame, face, False)
         # print(PointList)
 
-        cv.putText(frame, f'FPS: {round(FPS,1)}',
-                   (460, 20), m.fonts, 0.7, m.YELLOW, 2)
+        # cv.putText(frame, f'FPS: {round(FPS,1)}',
+        #            (460, 20), m.fonts, 0.7, m.BLACK, 2)
         RightEyePoint = PointList[36:42]
         LeftEyePoint = PointList[42:48]
         leftRatio, topMid, bottomMid = m.blinkDetector(LeftEyePoint)
@@ -108,21 +108,22 @@ while True:
         # cv.circle(image, bottomMid, 2, m.YELLOW, -1)
 
         blinkRatio = (leftRatio + rightRatio)/2
-        cv.circle(image, circleCenter, (int(blinkRatio*4.3)), m.CHOCOLATE, -1)
-        cv.circle(image, circleCenter, (int(blinkRatio*3.2)), m.CYAN, 2)
-        cv.circle(image, circleCenter, (int(blinkRatio*2)), m.GREEN, 3)
+        cv.circle(image, circleCenter, (int(blinkRatio*4.3)), m.BLACK, -1)
+        cv.circle(image, circleCenter, (int(blinkRatio*3.2)), m.BLACK, 2)
+        cv.circle(image, circleCenter, (int(blinkRatio*2)), m.BLACK, 3)
 
         if blinkRatio > 2:
             COUNTER += 1
+            TOTAL_BLINKS += 1
             cv.putText(image, f'Blink', (70, 50),
-                       m.fonts, 0.8, m.LIGHT_BLUE, 2)
+                       m.fonts, 0.8, m.BLACK, 2)
             # print("blink")
         else:
             if COUNTER > CLOSED_EYES_FRAME:
-                TOTAL_BLINKS += 1
+                
                 COUNTER = 0
         cv.putText(image, f'Total Blinks: {TOTAL_BLINKS}', (230, 17),
-                   m.fonts, 0.5, m.ORANGE, 2)
+                   m.fonts, 0.5, m.BLACK, 2)
 
         # for p in LeftEyePoint:
         #     cv.circle(image, p, 3, m.MAGENTA, 1)
@@ -132,8 +133,8 @@ while True:
 
         # draw background as line where we put text.
         cv.line(image, (30, 90), (100, 90), color[0], 30)
-        cv.line(image, (25, 50), (135, 50), m.WHITE, 30)
-        cv.line(image, (int(width-150), 50), (int(width-45), 50), m.WHITE, 30)
+        cv.line(image, (25, 50), (135, 50), m.BLACK, 30)
+        cv.line(image, (int(width-150), 50), (int(width-45), 50), m.BLACK, 30)
         cv.line(image, (int(width-140), 90),
                 (int(width-60), 90), leftColor[0], 30)
 
@@ -146,8 +147,9 @@ while True:
                    m.fonts, 0.6, leftColor[1], 2)
         if pos == 'Left' or pos == 'Right':
            deviation_count += 1
-
-        print(pos, " ", deviation_count)
+           print(pos, " Deviation ", deviation_count)
+        else:
+            print(pos, " ", deviation_count)
         # showing the frame on the screen
         cv.imshow('Frame', image)
     else:

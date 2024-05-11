@@ -19,14 +19,14 @@ while True:
     ret, frame = cap.read()
 
     # Convert frame to grayscale
-    gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Detect faces in the frame
-    faces = face_cascade.detectMultiScale(gray_frame, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
+    faces = face_cascade.detectMultiScale(frame, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
 
     for (x, y, w, h) in faces:
         # Extract the face ROI (Region of Interest)
-        face_roi = gray_frame[y:y + h, x:x + w]
+        face_roi = frame[y:y + h, x:x + w]
 
         # Resize the face ROI to match the input shape of the model
         resized_face = cv2.resize(face_roi, (48, 48), interpolation=cv2.INTER_AREA)

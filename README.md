@@ -31,7 +31,7 @@ To get started with Psycle, follow these steps:
 
 Clone the repository: 
 
-``` git clone https://github.com/riyasachdeva04/psycle.git ```
+``` git clone https://github.com/riyasachdeva04/Psycle.git ```
 
 Install dependencies:
 ```pip install -r requirements.txt```

@@ -68,7 +68,7 @@ def faceDetector(image, gray, Draw=True):
 
         # draw rectangle if draw is True.
         if Draw == True:
-            cv.rectangle(image, cordFace1, cordFace2, GREEN, 2)
+            cv.rectangle(image, cordFace1, cordFace2, BLACK, 2)
     return image, face
 
 
